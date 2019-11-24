@@ -5,9 +5,9 @@ LS_URL="https://artifacts.elastic.co/downloads/logstash"
 KB_URL="https://artifacts.elastic.co/downloads/kibana"
 FB_URL="https://artifacts.elastic.co/downloads/beats/filebeat"
 
-VER="7.4.2"
+VER="7.4.0"
 
-ES="elasticsearch-${VER}-linux-x86_64.tar.gz"
+ES="elasticsearch-${VER}.tar.gz"
 LS="logstash-${VER}.tar.gz"
 KB="kibana-${VER}-linux-x86_64.tar.gz"
 FB="filebeat-${VER}-linux-x86_64.tar.gz"
@@ -45,64 +45,64 @@ PWD=$(pwd)
 git pull
 
 if [ $USER == "root" ]; then
-        echo "root is not permitted"
-        exit -1
+	echo "root is not permitted"
+	exit -1
 fi
 
-if [ $PWD != "/home/floris38/ES-Tutorial-ELK" ]; then
-        pwd
-        echo "/home/floris38/ES-Tutorial-ELK path is permitted only"
-        exit -1
+if [ $PWD != "/home/ec2-user/ES-Tutorial-ELK" ]; then
+	pwd
+	echo "/home/ec2-user/ES-Tutorial-ELK path is permitted only"
+	exit -1
 fi
 
 function install_elk_packages
 {
 
-        sudo yum -y install wget java
-        mkdir ${PKGS_DIR}
-        cd ${PKGS_DIR}
+	sudo yum -y install wget java
+	mkdir ${PKGS_DIR}
+	cd ${PKGS_DIR}
 
-        wget ${ES_PKGS}
-        wget ${LS_PKGS}
-        wget ${KB_PKGS}
-        wget ${FB_PKGS}
+	wget ${ES_PKGS}
+	wget ${LS_PKGS}
+	wget ${KB_PKGS}
+	wget ${FB_PKGS}
 
-        tar xfz ${ES}
-        tar xfz ${LS}
-        tar xfz ${KB}
-        tar xfz ${FB}
+	tar xfz ${ES}
+	tar xfz ${LS}
+	tar xfz ${KB}
+	tar xfz ${FB}
 
-        ln -s ./elasticsearch-${VER}-linux-x86_64 elasticsearch
-        ln -s ./logstash-${VER} logstash
-        ln -s ./kibana-${VER}-linux-x86_64 kibana
-        ln -s ./filebeat-${VER}-linux-x86_64 filebeat
-        sudo sh -c "echo 'floris38              soft    nofile          65536' >> /etc/security/limits.conf"
-        sudo sh -c "echo 'floris38              hard    nofile          65536' >> /etc/security/limits.conf"
-        sudo sh -c "echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf"
+	ln -s ./elasticsearch-${VER} elasticsearch
+	ln -s ./logstash-${VER} logstash
+	ln -s ./kibana-${VER}-linux-x86_64 kibana
+	ln -s ./filebeat-${VER}-linux-x86_64 filebeat
+	sudo sh -c "echo 'ec2-user		soft    nofile          65536' >> /etc/security/limits.conf"
+	sudo sh -c "echo 'ec2-user		hard    nofile          65536' >> /etc/security/limits.conf"
+	sudo sh -c "echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf"
 	sudo sysctl -p
-        sudo su - floris38
+	sudo su - ec2-user
 }
 
 function es_start
 {
-        cp ${CONF_DIR}/${ES_CONF} ${PKGS_DIR}/${ES_DIR}/config/elasticsearch.yml
-        ${PKGS_DIR}/${ES_DIR}/bin/elasticsearch -d
+	cp ${CONF_DIR}/${ES_CONF} ${PKGS_DIR}/${ES_DIR}/config/elasticsearch.yml
+	${PKGS_DIR}/${ES_DIR}/bin/elasticsearch -d
 }
 
 function kb_start
 {
-        cp ${CONF_DIR}/${KB_CONF} ${PKGS_DIR}/${KB_DIR}/config/${KB_CONF}
-        sudo cp ${CONF_DIR}/${KB_SVC} ${SYS_DIR}/${KB_SVC}
-        daemon_reload
-        sudo systemctl start ${KB_SVC}
+	cp ${CONF_DIR}/${KB_CONF} ${PKGS_DIR}/${KB_DIR}/config/${KB_CONF}
+	sudo cp ${CONF_DIR}/${KB_SVC} ${SYS_DIR}/${KB_SVC}
+	daemon_reload
+	sudo systemctl start ${KB_SVC}
 }
 
 function fb_start
 {
-        cp ${CONF_DIR}/${TG_CONF1} ${PKGS_DIR}/${FB_DIR}/${FB_CONF}
-        sudo cp ${CONF_DIR}/${FB_SVC} ${SYS_DIR}/${FB_SVC}
-        daemon_reload
-        sudo systemctl start ${FB_SVC}
+	cp ${CONF_DIR}/${TG_CONF1} ${PKGS_DIR}/${FB_DIR}/${FB_CONF}
+	sudo cp ${CONF_DIR}/${FB_SVC} ${SYS_DIR}/${FB_SVC}
+	daemon_reload
+	sudo systemctl start ${FB_SVC}
 }
 
 function no_filter
@@ -145,7 +145,7 @@ function systemd_filter
 
 function daemon_reload
 {
-        sudo systemctl daemon-reload
+	sudo systemctl daemon-reload
 }
 
 
@@ -168,7 +168,7 @@ fi
 case "$1" in
         "1" ) install_elk_packages;;
         "2" ) es_start; kb_start; fb_start;;
-        "3" ) no_filter;;
+	"3" ) no_filter;;
         "4" ) simple_filter;;
         "5" ) beats_filter;;
         "6" ) apache_filter;;
