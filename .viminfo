@@ -36,8 +36,8 @@
 	http.cors.allow-origin: "*"
 
 # File marks:
-'0  255  0  ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
-'1  8  7  ~/ES-Tutorial-ELK/packages/elasticsearch/config/elasticsearch.yml
+'0  8  0  ~/ES-Tutorial-ELK/packages/elasticsearch/config/elasticsearch.yml
+'1  255  0  ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
 '2  9  0  ~/ES-Tutorial-ELK/packages/elasticsearch/config/elasticsearch.yml
 '3  177  9  ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
 '4  94  1  ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
@@ -48,9 +48,9 @@
 '9  22  0  ~/ES-Tutorial-ELK/packages/elasticsearch/config/jvm.options
 
 # Jumplist (newest first):
+-'  8  0  ~/ES-Tutorial-ELK/packages/elasticsearch/config/elasticsearch.yml
 -'  255  0  ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
 -'  177  1  ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
--'  8  7  ~/ES-Tutorial-ELK/packages/elasticsearch/config/elasticsearch.yml
 -'  9  0  ~/ES-Tutorial-ELK/packages/elasticsearch/config/elasticsearch.yml
 -'  94  1  ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
 -'  1  0  ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
@@ -148,11 +148,8 @@
 
 # History of marks within files (newest to oldest):
 
-> ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
-	"	255	0
-
 > ~/ES-Tutorial-ELK/packages/elasticsearch/config/elasticsearch.yml
-	"	8	7
+	"	8	0
 	^	8	8
 	.	8	7
 	+	1	26
@@ -181,6 +178,9 @@
 	+	8	1
 	+	9	1
 	+	8	7
+
+> ~/ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
+	"	255	0
 
 > ~/ES-Tutorial-ELK/conf/elasticsearch.yml
 	"	7	41

@@ -132,3 +132,21 @@ curl localhost:9200
 vi ES-Tutorial-ELK/packages/elasticsearch/logs/git-7.4.2.log
 curl localhost:9200
 ls
+git push
+git init
+git status
+git add .
+git status
+git commit -m "elk 7.4.2"
+git config --global user.email "friud38@gmail.com"
+git config --global user.name "hyunleehyun"
+git commit -m "elk 7.4.2"
+git status
+git add .
+git commit
+git commit -m "elk 7.4.2"
+git remote
+git remote add hyunlee https://github.com/hyunleehyun/custom_elastic.git
+git commit
+git commit -m "elk 7.4.2"
+git push hyunlee master
