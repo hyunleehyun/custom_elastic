@@ -9,6 +9,7 @@
 ~H
 # Command Line History (newest to oldest):
 :wq
+:q
 
 # Search String History (newest to oldest):
 
@@ -21,12 +22,50 @@
 # Registers:
 
 # File marks:
-'0  5  52  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
-'1  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+'0  14  0  ~/.bash_profile
+'1  1  0  ~/.bash_profile
+'2  5  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+'3  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
 
 # Jumplist (newest first):
--'  5  52  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+-'  14  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  5  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
 -'  1  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  5  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  5  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  5  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/elasticsearch.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
+-'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
 -'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
 -'  1  0  ~/ES-Tutorial-ELK/conf/kibana.yml
 -'  28  18  ~/ES-Tutorial-ELK/conf/kibana.yml
@@ -34,8 +73,14 @@
 
 # History of marks within files (newest to oldest):
 
+> ~/.bash_profile
+	"	14	0
+	^	14	0
+	.	13	0
+	+	13	0
+
 > ~/ES-Tutorial-ELK/conf/elasticsearch.yml
-	"	5	52
+	"	5	0
 	^	5	53
 	.	5	50
 	+	5	50
