@@ -73,7 +73,7 @@ function install_elk_packages
         tar xfz ${KB}
         tar xfz ${FB}
 
-        ln -s ./elasticsearch-${VER}-linux-x86_64 elasticsearch
+        ln -s ./elasticsearch-${VER} elasticsearch
         ln -s ./logstash-${VER} logstash
         ln -s ./kibana-${VER}-linux-x86_64 kibana
         ln -s ./filebeat-${VER}-linux-x86_64 filebeat
