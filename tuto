@@ -1,11 +1,12 @@
 #!/bin/sh
 
+VER="7.6.0"
+
 ES_URL="https://artifacts.elastic.co/downloads/elasticsearch"
 LS_URL="https://artifacts.elastic.co/downloads/logstash"
 KB_URL="https://artifacts.elastic.co/downloads/kibana"
 FB_URL="https://artifacts.elastic.co/downloads/beats/filebeat"
 
-VER="7.4.2"
 
 ES="elasticsearch-${VER}-linux-x86_64.tar.gz"
 LS="logstash-${VER}.tar.gz"
@@ -49,9 +50,9 @@ if [ $USER == "root" ]; then
         exit -1
 fi
 
-if [ $PWD != "/home/floris38/ES-Tutorial-ELK" ]; then
+if [ $PWD != "/home/gyeonghyun_lee/ES-Tutorial-ELK" ]; then
         pwd
-        echo "/home/floris38/ES-Tutorial-ELK path is permitted only"
+        echo "/home/gyeonghyun_lee/ES-Tutorial-ELK path is permitted only"
         exit -1
 fi
 
@@ -76,11 +77,11 @@ function install_elk_packages
         ln -s ./logstash-${VER} logstash
         ln -s ./kibana-${VER}-linux-x86_64 kibana
         ln -s ./filebeat-${VER}-linux-x86_64 filebeat
-        sudo sh -c "echo 'floris38              soft    nofile          65536' >> /etc/security/limits.conf"
-        sudo sh -c "echo 'floris38              hard    nofile          65536' >> /etc/security/limits.conf"
+        sudo sh -c "echo 'gyeonghyun_lee              soft    nofile          65536' >> /etc/security/limits.conf"
+        sudo sh -c "echo 'gyeonghyun_lee              hard    nofile          65536' >> /etc/security/limits.conf"
         sudo sh -c "echo 'vm.max_map_count = 262144' >> /etc/sysctl.conf"
 	sudo sysctl -p
-        sudo su - floris38
+        sudo su - gyeonghyun_lee
 }
 
 function es_start
