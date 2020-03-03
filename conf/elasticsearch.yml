@@ -1,3 +1,10 @@
+### For Response by External Request
 network.host: 0.0.0.0
+
+### For Head
 http.cors.enabled: true
 http.cors.allow-origin: "*"
+
+### Discovery Settings
+discovery.seed_hosts: ["10.128.0.14:9300",]
+cluster.initial_master_nodes: ["10.128.0.14:9300",]
